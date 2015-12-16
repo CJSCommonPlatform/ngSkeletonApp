@@ -7,8 +7,8 @@ As coding styles we are following John Papa's recommendations: https://github.co
 ```
 The project requires of Gulp.js and Bower.js to work
 
-$ npm install --global gulp
-$ npm install --global bower-cli
+$ npm install -g gulp
+$ npm install -g bower
 $ npm install && bower install
 ```
 

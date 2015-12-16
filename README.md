@@ -8,7 +8,8 @@ npm install && bower install
 
 # Structure
 
-root
+```
+root 
   |
   |- external (to include all external JS libraries that are not included in bower)
   |- gulp (includes all the gulp tasks in modular files)
@@ -34,8 +35,11 @@ root
   |- karma.conf.js
   |- package.json        
 
+```
 # Gulp tasks to take into consideration
 
+```
 gulp: Will generate a dist folder, inject into the index all the dependencies, copy all the relevant files and serve project
 gulp --production: Will generate a dist folder with minified, merged and uglified js files, inject into the index all the dependencies, copy all the relevant files
 gulp test: Will run the unit tests
+```

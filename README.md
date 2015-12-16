@@ -6,6 +6,10 @@ As coding styles we are following John Papa's recommendations: https://github.co
 
 npm install && bower install
 
+# Application loading
+
+Angular.bootstrap is set up to load initial resources like configuration and routes, but this can also be used for permissions and users. So we make sure that all the essential resources are ready from the beginning.
+
 # Structure
 
 ```
@@ -42,4 +46,13 @@ root
 gulp: Will generate a dist folder, inject into the index all the dependencies, copy all the relevant files and serve project
 gulp --production: Will generate a dist folder with minified, merged and uglified js files, inject into the index all the dependencies, copy all the relevant files
 gulp test: Will run the unit tests
+gult -T: Will display all the tasks available
 ```
+
+# lazy loading
+
+The project uses lazy loading (https://oclazyload.readme.io) for routes and modules, which means that just the essential modules and files are preloaded. Controllers, templates and extra modules will be loaded on the fly when needed.
+
+# Dynamic Routing
+
+Routes are provided initially through src/app/config/routes.config.json. This is done so later the system can be plugged to a 3rd party API to manage routes dynamically.

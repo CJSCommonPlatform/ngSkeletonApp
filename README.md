@@ -10,7 +10,7 @@ The project requires of Gulp.js and Bower.js to work and Karma and selenium-webd
 $ npm install -g gulp
 $ npm install -g bower
 $ npm install -g selenium-webdriver
-$ webdriver-manager uddate
+$ webdriver-manager update
 $ webdriver-manager start (webdriver needs to be running in order to run protractor tests)
 $ npm install && bower install
 ```

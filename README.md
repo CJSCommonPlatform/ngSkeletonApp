@@ -5,10 +5,13 @@ As coding styles we are following John Papa's recommendations: https://github.co
 # Installation
 
 ```
-The project requires of Gulp.js and Bower.js to work
+The project requires of Gulp.js and Bower.js to work and Karma and selenium-webdriver to run protractor tests 
 
 $ npm install -g gulp
 $ npm install -g bower
+$ npm install -g selenium-webdriver
+$ webdriver-manager uddate
+$ webdriver-manager start (webdriver needs to be running in order to run protractor tests)
 $ npm install && bower install
 ```
 
@@ -52,6 +55,7 @@ root
 gulp: Will generate a dist folder, inject into the index all the dependencies, copy all the relevant files and serve project
 gulp --production: Will generate a dist folder with minified, merged and uglified js files, inject into the index all the dependencies, copy all the relevant files
 gulp test: Will run the unit tests
+gulp protractor: Will run protractor tests
 gult -T: Will display all the tasks available
 ```
 

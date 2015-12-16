@@ -1,17 +1,19 @@
-(function () {
-  'use strict';
+'use strict';
 
-  var IndexPage = function () {};
+function IndexPage() {
+  this.pageTitle = by.tagName('h1');
 
+  this.getPageTitle = function() {
+    return element(this.pageTitle).getText();
+  };
 
-  IndexPage.prototype = Object.create({}, {
-    sample: {
-      get: function (keys) {
-        return element(by.model('username')).sendKeys(keys);
-      }
-    }
-  });
+  this.goToUrl = function(url){
+    browser.get(url);
+  };
 
-  module.exports = IndexPage;
+  this.getCurrentUrl = function(){
+    return browser.getCurrentUrl();
+  };
+}
 
-}());
+module.exports = IndexPage;

@@ -6,10 +6,10 @@ var $    = require('gulp-load-plugins')({ lazy: true });
 
 // starts development server
 // [development] starts livereload and opens browser
-module.exports = function(){
+module.exports = function(config, log){
   gulp.task('serve', function() {
-    var port = 9009,
-      host = '127.0.0.1';
+    var port = config.servePort,
+      host = config.serveHost;
 
     $.connect.server({
       port:       port,

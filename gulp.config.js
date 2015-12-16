@@ -16,12 +16,16 @@
 
     var config = {
       build_dir: dist,
+      servePort: '9009',
+      serveHost: '127.0.0.1',
       build_destination: 'dist',
       styles: 'src/assets/styles/app.less',
       distStyles: './dist/styles',
       vendorStyles: 'src/assets/styles/vendor.less',
       imagesSrc: 'src/images/**',
       bowerFiles: '**/*.js',
+      protFiles: 'src/**/*.prot.js',
+      protConfig: 'protractor.conf.js',
       distJsFiles: [
         'src/**/components/**/*.js',
         'src/**/routes/**/*.js',

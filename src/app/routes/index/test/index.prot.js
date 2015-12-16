@@ -1,19 +1,16 @@
+var IndexPage = require('./index.page');
+
 (function () {
   'use strict';
 
   describe('IndexController', function () {
 
-    beforeEach(module('cpp-ui-spa-master.routes.index'));
+    var page = new IndexPage();
 
-    beforeEach(function() {
-      browser.get('/#/');
+    it('should ...', function () {
+      page.goToUrl('/#/');
+      expect(page.getCurrentUrl()).toMatch('/#/');
     });
-
-    it('should ...', inject(function () {
-
-      expect(browser.getCurrentUrl()).toMatch('/#/');
-
-    }));
 
   });
 

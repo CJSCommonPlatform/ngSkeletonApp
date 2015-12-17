@@ -2,27 +2,27 @@
   {
     "state": "index",
     "url":"/",
-    "templateUrl": "app/routes/index/index.tpl.html",
+    "templateUrl": "app/views/index/index.tpl.html",
     "pageTitle":"Welcome to the Common Platform",
     "permissions": [],
     "controller": "IndexController",
     "controllerAs": "index",
     "name": "app-ui-spa-master.routes.index",
     "files":[
-      "app/routes/index/index.controller.js"
+      "app/views/index/index.controller.js"
     ]
   },
   {
     "state": "lazy",
     "url":"/lazy",
-    "templateUrl": "app/routes/lazy/lazy.tpl.html",
+    "templateUrl": "app/views/lazy/lazy.tpl.html",
     "pageTitle":"Lazy Loading Example",
     "permissions": [],
     "controller": "LazyController",
     "controllerAs": "lazy",
     "name": "app-ui-spa-master.routes.lazy",
     "files":[
-      "app/routes/lazy/lazy.controller.js"
+      "app/views/lazy/lazy.controller.js"
     ]
   }
 

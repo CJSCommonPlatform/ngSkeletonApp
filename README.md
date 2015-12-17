@@ -67,4 +67,18 @@ The project uses lazy loading (https://oclazyload.readme.io) for routes and modu
 
 Routes are provided initially through src/app/config/routes.config.json. This is done so later the system can be plugged to a 3rd party API to manage routes dynamically.
 
-# Inclusions
+# Permissions
+
+To manage permissions we use Angular Permissions library (https://github.com/Narzerus/angular-permission). In the routes.config.json you basically need to add array of permissions that are entitled to visit that path.
+```
+  // We define a route via ui-router's $stateProvider
+  $stateProvider
+    .state('staffpanel', {
+      url: '...',
+      data: {
+        permissions: {
+          only: ['admin', 'moderator']
+        }
+      }
+    });
+```

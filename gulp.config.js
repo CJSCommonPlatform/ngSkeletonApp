@@ -28,8 +28,8 @@
       protConfig: 'protractor.conf.js',
       distJsFiles: [
         'src/**/components/**/*.js',
-        'src/**/routes/**/*.js',
-        '!src/app/routes/routes.module.js',
+        'src/**/views/**/*.js',
+        '!src/app/views/routes.module.js',
         '!src/**/*.spec.js',
         '!src/**/*.prot.js',
         '!src/**/*.page.js'
@@ -55,14 +55,14 @@
       allJs: [
         'app/app.bootstrap.js',
         'app/app.module.js',
-        'app/routes/**/*.js',
+        'app/views/**/*.js',
         'app/config/*.js',
         'external/**/*.js'
       ],
       allJsFilesApartFromTest: [
         'app/app.bootstrap.js',
         'app/app.module.js',
-        'app/routes/**/*.js',
+        'app/views/**/*.js',
         'external/**/*.js',
         'app/config/*.js',
         '!**/*.spec.js',
@@ -111,10 +111,10 @@
       karmaBowerDependencies: getKarmaBowerDependencies(),
       appFilesToTest: [
         app + 'app.module.js',
-        app + 'routes/routes.module.js',
-        app + 'routes/index/index.module.js',
+        app + 'views/routes.module.js',
+        app + 'views/index/index.module.js',
         app + 'components/**/*.spec.js',
-        app + 'routes/**/*.spec.js'
+        app + 'views/**/*.spec.js'
       ],
 
       ///*

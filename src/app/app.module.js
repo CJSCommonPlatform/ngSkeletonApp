@@ -19,15 +19,15 @@
             'ngCookies',
             'permission',
             'angular-ladda',
-            'angular-underscore'
+            'ngLodash'
         ])
         .value('globalConfig', {})
         .value('routesConfig', [])
         .run(runBlock);
 
-    function runBlock($rootScope, locale, routesConfig, dynamicStateProvider) {
+    function runBlock($rootScope, locale, routesConfig, dynamicStateProvider, lodash) {
 
-      _.each(routesConfig, function(state){
+      lodash.each(routesConfig, function(state){
         dynamicStateProvider.addState(state);
       });
 
@@ -44,7 +44,7 @@
       }
 
       // Language Select Function
-      $rootScope.selectedLanguage = $rootScope.langs[_.findIndex($rootScope.langs, {value: locale.getLocale()})];
+      $rootScope.selectedLanguage = $rootScope.langs[lodash.findIndex($rootScope.langs, {value: locale.getLocale()})];
 
       $rootScope.updadeLang = function(lang) {
         locale.setLocale(lang.value);
@@ -69,3 +69,6 @@
     }
 
 }());
+
+
+

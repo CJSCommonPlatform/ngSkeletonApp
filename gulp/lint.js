@@ -24,9 +24,9 @@ module.exports = function(config, log) {
       .pipe($.if(args.verbose, $.print()))/*gulp lint --verbose*/
       .pipe($.jshint())
       .pipe($.jshint.reporter('jshint-stylish', {verbose: true}))
-      //.pipe($.arialinter({
-      //  level: 'AA'
-      //}))
+      .pipe($.arialinter({
+        level: 'AA'
+      }))
       .pipe($.if(breakOnError, jsHintErrorReporter()))
       .pipe(browserSync.reload({stream: true}));
   }

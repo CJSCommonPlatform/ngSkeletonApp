@@ -1,0 +1,11 @@
+angular
+    .module('cpp-ui-spa-master.global.error-tracing',[
+    {
+      name:'cpp-ui-spa-master.global.error-tracing.traceError',
+      files:['app/components/global/error-tracing/error-tracing.service.js']
+    },
+    {
+      name:'cpp-ui-spa-master.global.error-tracing.exceptionHandler',
+      files:['app/components/global/error-tracing/error-handler.provider.js']
+    }
+  ]);

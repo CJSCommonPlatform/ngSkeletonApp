@@ -15,7 +15,7 @@
     ////////////////
 
     function greetings() {
-      return 'Hello World !!';
+      return 'Welcome to a lazy loaded view !!';
     }
   }
 

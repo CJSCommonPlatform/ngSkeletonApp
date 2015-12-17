@@ -32,7 +32,7 @@ root
           |- config
               |- app.config.json
               |- routes.config.json                                            
-          |- routes
+          |- views
               |- routes.module.js          
           |- app.bootsptrap.js
           |- app.module.js                                              

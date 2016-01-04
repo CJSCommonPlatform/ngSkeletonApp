@@ -1,4 +1,5 @@
 {
   "environment":"dev",
-  "apiRoot": "http://www.google.com"
+  "apiRoot": "http://www.google.com",
+  "errorServer": "./error-server"
 }

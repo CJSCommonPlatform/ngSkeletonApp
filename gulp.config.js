@@ -56,7 +56,7 @@
         'app/app.bootstrap.js',
         'app/app.module.js',
         'app/views/**/*.js',
-        'app/config/*.js',
+        'app/config/**/*.js',
         'external/**/*.js'
       ],
       allJsFilesApartFromTest: [
@@ -64,7 +64,7 @@
         'app/app.module.js',
         'app/views/**/*.js',
         'external/**/*.js',
-        'app/config/*.js',
+        'app/config/**/*.js',
         '!**/*.spec.js',
         '!**/*.prot.js',
         '!**/*.page.js'
@@ -159,11 +159,16 @@
     ///////////////////////
 
     function getKarmaBowerDependencies() {
-
-      return wiredep({
-        devDependencies: true,
-        dependencies: true
-      })['js'];
+      return [
+        'bower_components/angular/angular.js',
+        'bower_components/angular-mocks/angular-mocks.js',
+        'bower_components/jquery/dist/jquery.js',
+      ]
+      //return wiredep({
+      //  devDependencies: true,
+      //  dependencies: true,
+      //  exclude: [/stacktrace-gps/]
+      //})['js'];
     }
 
     function getKarmaOptions() {

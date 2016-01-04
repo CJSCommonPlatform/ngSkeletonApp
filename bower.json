@@ -43,7 +43,7 @@
     "ng-lodash": "~0.3.0",
     "oclazyload": "~1.0.9",
     "respond": "~1.4.2",
-    "stacktrace-js": "~1.0.1"
+    "stacktrace": "0.5"
   },
   "overrides": {
     "cpp-ui": {
@@ -60,8 +60,5 @@
   },
   "devDependencies": {
     "sinon": "~1.17.2"
-  },
-  "ignoredDependencies":[
-    "stacktrace-gps"
-  ]
+  }
 }

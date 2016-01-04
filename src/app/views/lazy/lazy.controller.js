@@ -6,10 +6,6 @@
     .module('cpp-ui-spa-master.routes.lazy',[{
         name: 'cpp-ui-spa-master.case.HelloWorld',
         files: ['app/components/case/case-example.service.js']
-      },
-      {
-        name:'cpp-ui-spa-master.global.error-tracing.traceError',
-        files:['app/components/global/error-tracing/error-tracing.module.js']
       }
     ])
     .controller('LazyController', LazyController);
@@ -17,9 +13,25 @@
   function LazyController(HelloWorld){
     var vm = this;
     vm.message = HelloWorld.greetings();
+    //vm.causeError = function() {
+    //  console.log('test');
+    //  throw ('Throwing error');
+    //};
+
+    // I cause an error to be thrown in nested functions.
     vm.causeError = function() {
       foo();
     };
+    // ---
+    // PRIVATE METHODS.
+    // ---
+    function bar() {
+      // NOTE: "y" is undefined.
+      var x = y;
+    }
+    function foo() {
+      bar();
+    }
   }
 
 }());

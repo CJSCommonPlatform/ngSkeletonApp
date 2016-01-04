@@ -9,7 +9,7 @@ var $           = require('gulp-load-plugins')({ lazy: true });
 module.exports = function(config){
   gulp.task('copy-js-vendor', function() {
     return gulp.src(bowerFiles(config.bowerFiles, {includeDev: true}), {base: 'bower_components'})
-      .pipe($.uglify())
+      .pipe($.if($.util.env.production, $.uglify()))
       .pipe($.cached())
       .pipe(gulp.dest(config.distVendor))
       .pipe($.connect.reload());

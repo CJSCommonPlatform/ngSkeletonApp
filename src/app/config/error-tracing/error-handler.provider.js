@@ -2,7 +2,7 @@
   'use strict';
 
   angular
-    .module('cpp-ui-spa-master.global.error-tracing.exceptionHandler')
+    .module('cpp-ui-spa-master')
     .provider('$exceptionHandler',
     {
       $get: function( errorLogService ) {

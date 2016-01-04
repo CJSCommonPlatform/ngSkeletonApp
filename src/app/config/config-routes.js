@@ -32,7 +32,7 @@
                     return $ocLazyLoad.load(
                       {
                         name: state.name,
-                        files:  state.files,
+                        files:  state.files
                       }
                     );
                   }

@@ -41,6 +41,7 @@
     "element":    true,
     "$":          true,
     "$$":         true,
-    "_":          true
+    "_":          true,
+    "printStackTrace": true
   }
 }

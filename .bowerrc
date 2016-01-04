@@ -4,5 +4,9 @@
     "search": [
       "https://bower.herokuapp.com"
     ]
-  }
+  },
+  "ignoredDependencies":[
+    "stacktrace-gps",
+    "source-map"
+  ]
 }

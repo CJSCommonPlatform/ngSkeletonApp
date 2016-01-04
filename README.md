@@ -82,3 +82,7 @@ To manage permissions we use Angular Permissions library (https://github.com/Nar
       }
     });
 ```
+
+# StackTracing Errors
+
+We have override the $exceptionHandler so the platform will try to send any error to a server (errorServer) specified in the app/config/app.config.json. StackTrace.js (www.stacktracejs.com) is the library used to provide this functionality.

@@ -1,3 +1,3 @@
 {
-  "examplei18n": "This an example of localisation"
+  "examplei18n": "This an example of localisation. Clicking on the Cause Error button you'll throw an exception that will also try to log the error to a server that must be configured in the config file"
 }

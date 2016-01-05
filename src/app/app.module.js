@@ -8,7 +8,7 @@
             'cpp-ui-spa-master.config',
             'cpp-ui-spa-master.routes',
             'ui.bootstrap',
-            'ui.cpp',
+            'ngGovUk',
             'angularUtils.directives.dirPagination',
             'ngAnimate',
             'ngSanitize',

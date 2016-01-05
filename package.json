@@ -52,7 +52,6 @@
     "merge-stream": "^0.1.7",
     "npm": "^3.5.0",
     "open": "0.0.5",
-    "phantomjs": "^1.9.17",
     "run-sequence": "^1.1.0",
     "sinon": "^1.15.3",
     "stream-series": "^0.1.1",
@@ -60,6 +59,9 @@
     "wiredep": "^2.2.2",
     "wrench": "^1.5.8",
     "yargs": "^3.30.0"
+  },
+  "dependencies": {
+    "phantomjs": "1.9.18"
   },
   "scripts": {
     "test": "test"

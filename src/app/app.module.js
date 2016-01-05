@@ -66,7 +66,7 @@
         }
       });
 
-      $rootScope.$on("$stateChangeSuccess",  function() {
+      $rootScope.$on('$stateChangeSuccess',  function() {
         // uopdating the page's title
         if($state.current && $state.current.data && $state.current.data.pageTitle){
           $rootScope.pageTitle = $state.current.data.pageTitle;

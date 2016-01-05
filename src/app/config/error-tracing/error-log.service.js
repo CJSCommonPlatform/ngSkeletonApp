@@ -7,8 +7,7 @@
 
   function errorLogService( $log, $window, stacktraceService, globalConfig ) {
     function log( exception, cause ) {
-      $log.error.apply( $log, arguments );
-
+      //$log.error.apply( $log, arguments );
       if (globalConfig.reportErrors){
         try {
           var errorMessage = exception.toString();

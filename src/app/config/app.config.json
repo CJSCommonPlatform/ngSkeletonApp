@@ -1,5 +1,6 @@
 {
   "environment":"dev",
   "apiRoot": "http://www.google.com",
-  "errorServer": "./error-server"
+  "errorServer": "./error-server",
+  "reportErrors": true
 }

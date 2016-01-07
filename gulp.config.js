@@ -157,45 +157,45 @@
     ///////////////////////
 
     function getKarmaBowerDependencies() {
-      //return wiredep({
-      //  devDependencies: true
-      //})['js'];
+      return wiredep({
+        devDependencies: true
+      })['js'];
 
-      return [
-        'bower_components/angular/angular.js',
-        'bower_components/angular-mocks/angular-mocks.js',
-        'bower_components/jquery/jquery.js',
-        'bower_components/angular-animate/angular-animate.js',
-        'bower_components/angular-base64/angular-base64.js',
-        'bower_components/angular-bootstrap/ui-bootstrap-tpls.js',
-        'bower_components/angular-busy/dist/angular-busy.js',
-        'bower_components/angular-cookies/angular-cookies.js',
-        'bower_components/spin.js/spin.js',
-        'bower_components/angular-sanitize/angular-sanitize.js',
-        'bower_components/angular-middle/angular-middle.js',
-        'bower_components/angular-mocks/angular-mocks.js',
-        'bower_components/angular-ui-router/release/angular-ui-router.js',
-        'bower_components/angular-resource/angular-resource.js',
-        'bower_components/angular-ui-notification/dist/angular-ui-notification.min.js',
-        'bower_components/angular-utils-pagination/dirPagination.js',
-        'bower_components/angular.CQRS/dist/angular-cqrs.js',
-        'bower_components/jquery/jquery.min.js',
-        'bower_components/ng-gov-uk/dist/ngGovUk-tpls.min.js',
-        'bower_components/es5-shim/es5-shim.js',
-        'bower_components/html5shiv/dist/html5shiv.js',
-        'bower_components/jquery-ui/jquery-ui.js',
-        'bower_components/json3/lib/json3.js',
-        'bower_components/moment/moment.js',
-        'bower_components/ng-lodash/build/ng-lodash.js',
-        'bower_components/oclazyload/dist/ocLazyLoad.js',
-        'bower_components/respond/dest/respond.src.js',
-        'bower_components/stacktrace/stacktrace.js',
-        'bower_components/ladda/dist/ladda.min.js',
-        'bower_components/angular-localization/angular-localization.js',
-        'bower_components/angular-permission/dist/angular-permission.js',
-        'bower_components/bootstrap/dist/js/bootstrap.js',
-        'bower_components/angular-ladda/dist/angular-ladda.min.js'
-      ]
+      //return [
+      //  'bower_components/angular/angular.js',
+      //  'bower_components/angular-mocks/angular-mocks.js',
+      //  'bower_components/jquery/jquery.js',
+      //  'bower_components/angular-animate/angular-animate.js',
+      //  'bower_components/angular-base64/angular-base64.js',
+      //  'bower_components/angular-bootstrap/ui-bootstrap-tpls.js',
+      //  'bower_components/angular-busy/dist/angular-busy.js',
+      //  'bower_components/angular-cookies/angular-cookies.js',
+      //  'bower_components/spin.js/spin.js',
+      //  'bower_components/angular-sanitize/angular-sanitize.js',
+      //  'bower_components/angular-middle/angular-middle.js',
+      //  'bower_components/angular-mocks/angular-mocks.js',
+      //  'bower_components/angular-ui-router/release/angular-ui-router.js',
+      //  'bower_components/angular-resource/angular-resource.js',
+      //  'bower_components/angular-ui-notification/dist/angular-ui-notification.min.js',
+      //  'bower_components/angular-utils-pagination/dirPagination.js',
+      //  'bower_components/angular.CQRS/dist/angular-cqrs.js',
+      //  'bower_components/jquery/jquery.min.js',
+      //  'bower_components/ng-gov-uk/dist/ngGovUk-tpls.min.js',
+      //  'bower_components/es5-shim/es5-shim.js',
+      //  'bower_components/html5shiv/dist/html5shiv.js',
+      //  'bower_components/jquery-ui/jquery-ui.js',
+      //  'bower_components/json3/lib/json3.js',
+      //  'bower_components/moment/moment.js',
+      //  'bower_components/ng-lodash/build/ng-lodash.js',
+      //  'bower_components/oclazyload/dist/ocLazyLoad.js',
+      //  'bower_components/respond/dest/respond.src.js',
+      //  'bower_components/stacktrace/stacktrace.js',
+      //  'bower_components/ladda/dist/ladda.min.js',
+      //  'bower_components/angular-localization/angular-localization.js',
+      //  'bower_components/angular-permission/dist/angular-permission.js',
+      //  'bower_components/bootstrap/dist/js/bootstrap.js',
+      //  'bower_components/angular-ladda/dist/angular-ladda.min.js'
+      //]
     }
 
     function getKarmaOptions() {

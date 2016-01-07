@@ -22,7 +22,6 @@
     "angular-ladda": "~0.2.2",
     "angular-localization": "~1.2.1",
     "angular-middle": "~0.0.2",
-    "angular-mocks": "~1.2",
     "angular-permission": "~0.3.1",
     "angular-resource": "~1.2",
     "angular-sanitize": "~1.2",
@@ -59,6 +58,9 @@
     }
   },
   "devDependencies": {
-    "sinon": "~1.17.2"
+    "sinon": "~1.17.2",
+    "oclazyload": "~1.0.9",
+    "angular-mocks": "~1.2",
+    "angular-ui-router": "~0.2.15"
   }
 }

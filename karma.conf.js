@@ -66,9 +66,9 @@ module.exports = function (config) {
     // if true, Karma captures browsers, runs the tests and exits
     singleRun: false,
 
-    proxies:{
-      '/app/': '/src/app/'
-    },
+    //proxies:{
+    //  '/app/': '/src/app/'
+    //},
 
     browserNoActivityTimeout: 100000
   });

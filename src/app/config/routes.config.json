@@ -7,7 +7,7 @@
     "permissions": [],
     "controller": "IndexController",
     "controllerAs": "index",
-    "name": "app-ui-spa-master.routes.index",
+    "name": "cpp-ui-spa-master.routes.index",
     "files":[
       "app/views/index/index.controller.js"
     ]
@@ -20,7 +20,7 @@
     "permissions": [],
     "controller": "LazyController",
     "controllerAs": "lazy",
-    "name": "app-ui-spa-master.routes.lazy",
+    "name": "cpp-ui-spa-master.routes.lazy",
     "files":[
       "app/views/lazy/lazy.controller.js"
     ]

@@ -9,7 +9,7 @@ module.exports = function(config, log){
     gulp.watch('bower.json',  function() { runSequence(['copy-js-vendor', 'copy-fonts', 'copy-images'], 'build-index'); });
     gulp.watch(config.allJsButTest, function() { runSequence('copy-js-app', 'build-index', 'jshint'); });
     gulp.watch(config.allTestFiles, function() { runSequence('test'); });
-    gulp.watch('src/app/**/*.html', function() { runSequence('cache-templates', 'build-index'); });
+    gulp.watch('src/app/**/*.html', function() { runSequence('copy-html'); });
     gulp.watch(config.allLessFiles, ['build-css-app']);
     gulp.watch([
       config.vendorStyles

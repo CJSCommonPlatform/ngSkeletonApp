@@ -10,7 +10,7 @@ var bowerFiles  = require('main-bower-files');
 module.exports = function(config, log){
   gulp.task('copy-images', function() {
     return merge(
-      gulp.src('src/images/**'),
+      gulp.src(config.imagesSrc),
       gulp.src(bowerFiles(config.allImagesFiles))
     )
       .pipe($.cached('images'))

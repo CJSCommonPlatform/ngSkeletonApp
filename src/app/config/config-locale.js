@@ -3,8 +3,8 @@
 
     angular
         .module('cpp-ui-spa-master.config.locale', [
-          'ngLocalize',
-          'ngLocalize.Config'
+            'ngLocalize',
+            'ngLocalize.Config'
         ])
         .value('localeConf', {
             basePath: 'languages',
@@ -17,8 +17,8 @@
             delimiter: '::'
         })
         .value('localeSupported', [
-          'en-GB',
-          'cy'
+            'en-GB',
+            'cy'
         ]);
 
 }());

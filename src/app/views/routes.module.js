@@ -1,19 +1,19 @@
 (function () {
-  'use strict';
 
-  angular
-    .module('cpp-ui-spa-master.routes', [])
-    .config(routes);
+    'use strict';
 
-  function routes($urlRouterProvider, $locationProvider){
-    $locationProvider.html5Mode(false);
+    angular
+        .module('cpp-ui-spa-master.routes', [])
+        .config(routes);
 
-    //$urlRouterProvider.otherwise('/');
-    $urlRouterProvider.otherwise( function($injector) {
-      var $state = $injector.get('$state');
-      $state.go('index');
-    });
+    function routes($urlRouterProvider, $locationProvider) {
+        $locationProvider.html5Mode(false);
 
-  }
+        //$urlRouterProvider.otherwise('/');
+        $urlRouterProvider.otherwise(function ($injector) {
+            var $state = $injector.get('$state');
+            $state.go('index');
+        });
+    }
 
 }());

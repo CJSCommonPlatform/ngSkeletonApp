@@ -1,4 +1,5 @@
 (function () {
+
     'use strict';
 
     angular
@@ -27,56 +28,52 @@
 
     function runBlock($rootScope, locale, routesConfig, dynamicStateProvider, lodash, $state) {
 
-      lodash.each(routesConfig, function(state){
-        dynamicStateProvider.addState(state);
-      });
+        lodash.each(routesConfig, function (state) {
+            dynamicStateProvider.addState(state);
+        });
 
-      $rootScope.langs = [{
-        value: 'en-GB',
-        label: 'English'
-      }, {
-        value: 'cy',
-        label: 'Cymraeg'
-      }];
+        $rootScope.langs = [{
+            value: 'en-GB',
+            label: 'English'
+        }, {
+            value: 'cy',
+            label: 'Cymraeg'
+        }];
 
-      if(locale.getLocale() === 'en-US'){
-        locale.setLocale('en-GB');
-      }
-
-      // Language Select Function
-      $rootScope.selectedLanguage = $rootScope.langs[lodash.findIndex($rootScope.langs, {value: locale.getLocale()})];
-
-      $rootScope.updadeLang = function(lang) {
-        locale.setLocale(lang.value);
-      };
-
-      $rootScope.globalNav = {
-        pageTitle: {
-          title: 'Page title',
-          type: 'text',
-          ref: '#'
-        }
-      };
-
-      $rootScope.$on('$stateChangePermissionDenied', function() {
-        // so far if no valid permissions we send them to the home page
-        if (!$rootScope.waitingForCallback)
-        {
-          //$state.go('index');
-        }
-      });
-
-      $rootScope.$on('$stateChangeSuccess',  function() {
-        // uopdating the page's title
-        if($state.current && $state.current.data && $state.current.data.pageTitle){
-          $rootScope.pageTitle = $state.current.data.pageTitle;
+        if (locale.getLocale() === 'en-US') {
+            locale.setLocale('en-GB');
         }
 
-      });
+        // Language Select Function
+        $rootScope.selectedLanguage = $rootScope.langs[lodash.findIndex($rootScope.langs, { value: locale.getLocale() })];
+
+        $rootScope.updadeLang = function (lang) {
+            locale.setLocale(lang.value);
+        };
+
+        $rootScope.globalNav = {
+            pageTitle: {
+                title: 'Page title',
+                type: 'text',
+                ref: '#'
+            }
+        };
+
+        $rootScope.$on('$stateChangePermissionDenied', function () {
+            // so far if no valid permissions we send them to the home page
+            if (!$rootScope.waitingForCallback) {
+                //$state.go('index');
+            }
+        });
+
+        $rootScope.$on('$stateChangeSuccess', function () {
+            // uopdating the page's title
+            if ($state.current && $state.current.data && $state.current.data.pageTitle) {
+                $rootScope.pageTitle = $state.current.data.pageTitle;
+            }
+
+        });
 
     }
 
 }());
-
-
-

@@ -1,37 +1,37 @@
 (function () {
-  'use strict';
 
-  // this is an example of how to lazy load the module HelloWorld
-  angular
-    .module('cpp-ui-spa-master.routes.lazy',[{
-        name: 'cpp-ui-spa-master.case.HelloWorld',
-        files: ['app/components/case/case-example.service.js']
-      }
-    ])
-    .controller('LazyController', LazyController);
+    'use strict';
 
-  function LazyController(HelloWorld){
-    var vm = this;
-    vm.message = HelloWorld.greetings();
-    //vm.causeError = function() {
-    //  console.log('test');
-    //  throw ('Throwing error');
-    //};
+    // this is an example of how to lazy load the module HelloWorld
+    angular
+      .module('cpp-ui-spa-master.routes.lazy', [{
+          name: 'cpp-ui-spa-master.case.HelloWorld',
+          files: ['app/components/case/case-example.service.js']
+      }])
+      .controller('LazyController', LazyController);
 
-    // I cause an error to be thrown in nested functions.
-    vm.causeError = function() {
-      foo();
-    };
-    // ---
-    // PRIVATE METHODS.
-    // ---
-    function bar() {
-      // NOTE: "y" is undefined.
-      var x = y;
+    function LazyController(HelloWorld) {
+        var vm = this;
+        vm.message = HelloWorld.greetings();
+        //vm.causeError = function() {
+        //  console.log('test');
+        //  throw ('Throwing error');
+        //};
+
+        // I cause an error to be thrown in nested functions.
+        vm.causeError = function () {
+            foo();
+        };
+        // ---
+        // PRIVATE METHODS.
+        // ---
+        function bar() {
+            // NOTE: "y" is undefined.
+            var x = y;
+        }
+        function foo() {
+            bar();
+        }
     }
-    function foo() {
-      bar();
-    }
-  }
 
 }());

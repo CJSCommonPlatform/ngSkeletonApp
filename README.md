@@ -15,6 +15,15 @@ $ webdriver-manager start (webdriver needs to be running in order to run protrac
 $ npm install && bower install
 ```
 
+# Afer Installation
+```
+Go to your local .git/hooks folder and if you see the file 'commit-msg.old' 
+rename it to 'commit.msg' and if there is an existing 'commit-msg' rename it to 
+'commit-msg.new'. This is so that the pre-git plugin installed as part of npm install
+works as it should and you continue to get a change Id for every commit. 
+
+```
+
 # Application loading
 
 Angular.bootstrap is set up to load initial resources like configuration and routes, but this can also be used for permissions and users. So we make sure that all the essential resources are ready from the beginning.
@@ -55,8 +64,10 @@ root
 gulp: Will generate a dist folder, inject into the index all the dependencies, copy all the relevant files and serve project
 gulp --production: Will generate a dist folder with minified, merged and uglified js files, inject into the index all the dependencies, copy all the relevant files
 gulp test: Will run the unit tests
+gulp autotest: Will run the unit tests in continuous mode
 gulp protractor: Will run protractor tests
-gult -T: Will display all the tasks available
+gult -T: Will display a tree structure of all the tasks available
+gulp help: Will list all the available main and sub tasks
 ```
 
 # lazy loading
@@ -103,3 +114,6 @@ To manage permissions we use Angular Permissions library (https://github.com/Nar
 # StackTracing Errors
 
 We have override the $exceptionHandler so the platform will try to send any error to a server (errorServer) specified in the app/config/app.config.json. StackTrace.js (www.stacktracejs.com) is the library used to provide this functionality.
+
+# Linting
+To maintain common JS coding style and syntax amongst developers we use Eslint linting utility.

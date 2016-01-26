@@ -3,7 +3,7 @@
 
   describe('lazyController', function () {
     var $controller, controller, HelloWorld, $rootScope, $q;
-    beforeEach(module('cpp-ui-spa-master.routes.lazy'));
+    beforeEach(module('cpp-ui-spa-master.routes.lazy', 'cpp-ui-spa-master.case.HelloWorld'));
 
     beforeEach(inject(function(_$controller_, _HelloWorld_, _$rootScope_, _$q_) {
       HelloWorld = _HelloWorld_;

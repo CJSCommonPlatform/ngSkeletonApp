@@ -7,7 +7,7 @@ var runSequence = require('run-sequence');
 module.exports = function(config, log){
   gulp.task('watch', function() {
     gulp.watch('bower.json',  function() { runSequence(['copy-js-vendor', 'copy-fonts', 'copy-images'], 'build-index'); });
-    gulp.watch(config.allJsButTest, function() { runSequence('copy-js-app', 'build-index', 'jshint'); });
+    gulp.watch(config.allJsButTest, function() { runSequence('copy-js-app', 'build-index', 'lint'); });
     gulp.watch(config.allTestFiles, function() { runSequence('test'); });
     gulp.watch('src/app/**/*.html', function() { runSequence('copy-html'); });
     gulp.watch(config.allLessFiles, ['build-css-app']);

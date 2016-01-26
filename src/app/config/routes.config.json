@@ -22,7 +22,8 @@
     "controllerAs": "lazy",
     "name": "cpp-ui-spa-master.routes.lazy",
     "files":[
-      "app/views/lazy/lazy.controller.js"
+      "app/views/lazy/lazy.controller.js",
+      "app/components/case/case-example.service.js"
     ]
   }
 

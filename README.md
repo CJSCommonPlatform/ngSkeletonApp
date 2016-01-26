@@ -61,7 +61,24 @@ gult -T: Will display all the tasks available
 
 # lazy loading
 
-The project uses lazy loading (https://oclazyload.readme.io) for routes and modules, which means that just the essential modules and files are preloaded. Controllers, templates and extra modules will be loaded on the fly when needed.
+The project uses lazy loading (https://oclazyload.readme.io) for routes and modules, which means that just the essential modules and files are preloaded. Controllers, templates and extra modules will be loaded on the fly when needed. THe best way to implement the ocLazyLoad and test the components is through adding all the file dedepndencies un the routes.config.json:
+```
+  {
+    "state": "lazy",
+    "url":"/lazy",
+    "templateUrl": "app/views/lazy/lazy.tpl.html",
+    "pageTitle":"Lazy Loading Example",
+    "permissions": [],
+    "controller": "LazyController",
+    "controllerAs": "lazy",
+    "name": "cpp-ui-spa-master.routes.lazy",
+    "files":[
+      "app/views/lazy/lazy.controller.js",
+      "app/components/case/case-example.service.js"
+    ]
+  }
+```
+In this way the files will be already available and the dependencies are reachable on the tests as well.
 
 # Dynamic Routing
 

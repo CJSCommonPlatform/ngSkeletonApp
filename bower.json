@@ -1,6 +1,6 @@
 {
   "name": "cpp-ui-spa-master",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "main": "app/index.html",
   "ignore": [
     "**/.*",
@@ -45,11 +45,29 @@
     "stacktrace": "0.5"
   },
   "overrides": {
-    "cpp-ui": {
-      "main": "./dist/ui.cpp-tpls.js"
-    },
     "jquery": {
       "main": "./jquery.min.js"
+    },
+    "font-awesome": {
+      "main": [
+        "less/font-awesome.less",
+        "scss/font-awesome.scss",
+        "fonts/*.*"
+      ]
+    },
+    "ng-gov-uk": {
+      "main":[
+        "dist/ngGovUk-tpls.min.js",
+        "dist/ngGovUk.less",
+        "dist/assets/fonts/*.*"
+      ]
+    },
+    "bootstrap": {
+      "main": [
+        "less/bootstrap.less",
+        "dist/js/bootstrap.js",
+        "dist/fonts/*.*"
+      ]
     },
     "angular-underscore": {
       "dependencies": {

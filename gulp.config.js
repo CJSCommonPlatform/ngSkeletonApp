@@ -73,6 +73,7 @@
       distApp: dist + 'app',
       allAppJs: 'src/app/**/*.js',
       fontFiles: '**/*.{otf,eot,svg,ttf,woff,woff2}',
+      fontDest: 'dist/assets/fonts',
       cppAssets: 'bower_components/ng-gov-uk/dist/assets/**/*',
       bowerCss:'bower_components/**/*.css',
       appProd: '**/app-*.min.{js,css}',

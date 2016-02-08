@@ -9,7 +9,7 @@ module.exports = function (config) {
   gulp.task('copy-fonts', function () {
     return gulp.src(bowerFiles(config.fontFiles))
       .pipe($.rename({ dirname: ''}))
-      .pipe(gulp.dest('dist/assets/fonts'))
+      .pipe(gulp.dest(config.fontDest))
       .pipe($.connect.reload());
   });
 

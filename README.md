@@ -5,7 +5,7 @@ As coding styles we are following John Papa's recommendations: https://github.co
 # Installation
 
 ```
-The project requires of Gulp.js and Bower.js to work and Karma and selenium-webdriver to run protractor tests 
+The project requires of Gulp.js and Bower.js to work and Karma and selenium-webdriver to run protractor tests
 
 $ npm install -g gulp
 $ npm install -g bower
@@ -17,10 +17,10 @@ $ npm install && bower install
 
 # Afer Installation
 ```
-Go to your local .git/hooks folder and if you see the file 'commit-msg.old' 
-rename it to 'commit.msg' and if there is an existing 'commit-msg' rename it to 
+Go to your local .git/hooks folder and if you see the file 'commit-msg.old'
+rename it to 'commit.msg' and if there is an existing 'commit-msg' rename it to
 'commit-msg.new'. This is so that the pre-git plugin installed as part of npm install
-works as it should and you continue to get a change Id for every commit. 
+works as it should and you continue to get a change Id for every commit.
 
 ```
 
@@ -31,31 +31,31 @@ Angular.bootstrap is set up to load initial resources like configuration and rou
 # Structure
 
 ```
-root 
+root
   |
   |- external (to include all external JS libraries that are not included in bower)
   |- gulp (includes all the gulp tasks in modular files)
-  |- src 
+  |- src
       |- app
           |- components
           |- config
               |- app.config.json
-              |- routes.config.json                                            
+              |- routes.config.json
           |- views
-              |- routes.module.js          
+              |- routes.module.js
           |- app.bootsptrap.js
-          |- app.module.js                                              
-      |- assets    
+          |- app.module.js
+      |- assets
           |- css
           |- fonts
           |- images
-          |- styles                                    
+          |- styles
       |- index.html
   |- bower.json
   |- gulp.config.js (configuration file that includes constants for gulp tasks)
   |- gulpfile.js
   |- karma.conf.js
-  |- package.json        
+  |- package.json
 
 ```
 # Gulp tasks to take into consideration
@@ -72,7 +72,7 @@ gulp help: Will list all the available main and sub tasks
 
 # lazy loading
 
-The project uses lazy loading (https://oclazyload.readme.io) for routes and modules, which means that just the essential modules and files are preloaded. Controllers, templates and extra modules will be loaded on the fly when needed. THe best way to implement the ocLazyLoad and test the components is through adding all the file dedepndencies un the routes.config.json:
+The project uses lazy loading (https://oclazyload.readme.io) for routes and modules, which means that just the essential modules and files are preloaded. Controllers, templates and extra modules will be loaded on the fly when needed. The best way to implement the ocLazyLoad and test the components is through adding all the file dependencies un the routes.config.json:
 ```
   {
     "state": "lazy",

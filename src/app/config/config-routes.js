@@ -29,10 +29,23 @@
                         controllerAs: state.controllerAs,
                         resolve: {
                             state: function ($ocLazyLoad) {
-                                return $ocLazyLoad.load({
+                                /**
+                                 * This makes HTTP requests for JS files
+                                 * despite everything is already loaded from minified bundle
+                                 */
+                                /*return $ocLazyLoad.load({
                                     name: state.name,
                                     files: state.files
-                                });
+                                });*/
+
+                                /**
+                                 * Since minified bundle is already in memory
+                                 * We just have to tell angular to initialise it
+                                 *
+                                 * I was not sure of the purpose of 'name' property
+                                 * But I assumed it's a module name for given view
+                                 */
+                                $ocLazyLoad.inject(state.name);
                             }
                         }
                     });

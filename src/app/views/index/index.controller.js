@@ -3,7 +3,7 @@
     'use strict';
 
     angular
-        .module('cpp-ui-spa-master.routes.index')
+        .module('cpp-ui-spa-master.routes.index.IndexController', [])
         .controller('IndexController', IndexController);
 
     function IndexController() {

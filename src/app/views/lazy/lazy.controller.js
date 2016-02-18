@@ -3,8 +3,8 @@
 
   // this is an example of how to lazy load the module HelloWorld
     angular
-        .module('cpp-ui-spa-master.routes.lazy',[])
-        .controller('LazyController', LazyController);
+        .module('cpp-ui-spa-master.routes.lazy.LazyController', ['cpp-ui-spa-master.case.HelloWorld'])
+        .controller('LazyController', LazyController)
 
     function LazyController(HelloWorld){
         var vm = this;

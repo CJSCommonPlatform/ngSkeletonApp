@@ -57,6 +57,7 @@
         'app/app.module.js',
         'app/views/routes.module.js',
         'app/views/index/**/*.js',
+        'app/components/**/*.js',
         'app/config/**/*.js',
         'external/**/*.js'
       ],
@@ -66,6 +67,7 @@
         'app/views/**/*.js',
         'external/**/*.js',
         'app/config/**/*.js',
+        'app/components/**/*.js',
         '!**/*.spec.js',
         '!**/*.prot.js',
         '!**/*.page.js'

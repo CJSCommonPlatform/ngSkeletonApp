@@ -70,6 +70,17 @@
         '!**/*.prot.js',
         '!**/*.page.js'
       ],
+      allJsforDist: [
+        'app/app.bootstrap.js',
+        'app/app.module.js',
+        'app/views/routes.module.js',
+        'app/views/index/**/*.js',
+        'app/config/**/*.js',
+        'external/**/*.js',
+        '!**/*.spec.js',
+        '!**/*.prot.js',
+        '!**/*.page.js'
+      ],
       distApp: dist + 'app',
       allAppJs: 'src/app/**/*.js',
       fontFiles: '**/*.{otf,eot,svg,ttf,woff,woff2}',
@@ -117,31 +128,6 @@
         app + '!(bootstrap.js)'
       ],
 
-      ///*
-      // * Browser sync serving paths
-      // */
-      //serve: {
-      //  dev: {
-      //    root: src,
-      //    port: 3008,
-      //    routes: {
-      //      '/common': "node_modules/common/build",
-      //      '/bower_components': 'bower_components',
-      //      '/express': 'src/translations',
-      //      '/apps/nbt': 'src'
-      //    },
-      //    index: 'index.app.html'
-      //  },
-      //  dist: {
-      //    root: 'build/app/',
-      //    port: 3008
-      //  },
-      //  prod: {
-      //    root: 'build/app/',
-      //    port: 3008
-      //  }
-      //},
-
       browserReloadDelay: 1000
 
       /*
@@ -168,8 +154,10 @@
     function getKarmaOptions() {
       var options = {
         files: [].concat(
+          {pattern: 'src/app/config/app.config.json', watched: true, served: true, included: false},
           config.karmaBowerDependencies, // karma dependencies i.e. angular mocks
-          config.appFilesToTest // app modules and files to test
+          config.appFilesToTest, // app modules and files to test
+          {pattern: 'src/app/**/*.html', watched: true, served: true, included: true}
         ),
         coverage: {
           dir: config.tests_report_dir,
@@ -180,7 +168,12 @@
           ]
         },
         preprocessors: {
-          'src/**/!(test)/*.js': ['coverage']
+          'src/**/!(test)/*.js': ['coverage'],
+          'src/app/**/*!(index).html': 'ng-html2js'
+        },
+        ngHtml2JsPreprocessor: {
+          stripPrefix: 'src/',
+          moduleName: 'templates'
         }
       };
 

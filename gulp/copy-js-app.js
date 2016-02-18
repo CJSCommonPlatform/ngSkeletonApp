@@ -9,6 +9,8 @@ module.exports = function(config){
   gulp.task('copy-js-app', function() {
     if($.util.env.production) {
       return gulp.src(config.distJsFiles)
+        .pipe($.ngAnnotate({single_quotes: true}))
+        .pipe($.uglify())
         .pipe($.plumber())
         .pipe($.cached('js'))
         .pipe(gulp.dest(config.build_destination))

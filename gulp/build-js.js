@@ -15,13 +15,7 @@ var ngApp         = 'cpp-ui-spa-master';
 module.exports = function(config, log){
   gulp.task('build-js-app', function() {
     return merge(
-      gulp.src(config.allJsFilesApartFromTest, {cwd: 'src'}),
-      merge(
-        gulp.src(config.globs.templatesApp),
-        gulp.src(bowerFiles(config.allHtml))
-      )
-        .pipe($.minifyHtml())
-        .pipe($.angularTemplatecache('templates.js', {module: ngApp}))
+      gulp.src(config.allJsforDist, {cwd: 'src'})
     )
       .pipe($.angularFilesort())
       .pipe($.ngAnnotate({single_quotes: true}))

@@ -120,12 +120,12 @@
        * Karma and test settings
        */
       karmaConf: __dirname + '/karma.conf.js',
-      karmaPlugins: ['karma-jasmine', 'karma-coverage', 'karma-phantomjs-launcher', 'karma-chrome-launcher', 'karma-sinon', 'karma-junit-reporter'],
+      karmaPlugins: ['karma-jasmine', 'karma-coverage', 'karma-phantomjs-launcher', 'karma-chrome-launcher', 'karma-sinon', 'karma-junit-reporter', 'karma-ng-html2js-preprocessor'],
       karmaBowerDependencies: getKarmaBowerDependencies(),
       appFilesToTest: [
+        app + 'config/bootstrap.service.js',
         app + '**/*.module.js',
-        app + '**/!(*.prot|*.page).js',
-        app + '!(bootstrap.js)'
+        app + '**/!(*.prot|*.page).js'
       ],
 
       browserReloadDelay: 1000

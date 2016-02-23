@@ -26,12 +26,11 @@
         .value('routesConfig', [])
         .run(runBlock);
 
-    function runBlock($rootScope, InitLanguageService, RoutesService, globalConfig) {
+    function runBlock($rootScope, InitLanguageService, RoutesService) {
 
 
         InitLanguageService.init();
         RoutesService.init();
-
         $rootScope.globalNav = {
             pageTitle: {
                 title: 'Page title',

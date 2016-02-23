@@ -5,9 +5,8 @@
     var bootstrap = injector.get('BootstrapService');
 
     bootstrap.bootstrap('cpp-ui-spa-master').then(function () {
-        angular.element(document.body).ready(function () {
-            angular.bootstrap(document.body, ['cpp-ui-spa-master']);
-            document.body.className = document.body.className + ' ng-app';
+        angular.element(document).ready(function () {
+            angular.bootstrap(document, ['cpp-ui-spa-master']);
         });
     });
 }());

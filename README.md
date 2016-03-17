@@ -2,6 +2,10 @@
 
 As coding styles we are following John Papa's recommendations: https://github.com/johnpapa/angular-styleguide
 
+# Requires
+
+Node.js v4.0
+
 # Installation
 
 ```

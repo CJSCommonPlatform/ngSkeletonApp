@@ -27,7 +27,7 @@
               //}
             },
             controller: function (module, $controller) {
-              return new $controller(state.controller);
+              return $controller(state.controller);
             },
             controllerAs: state.controllerAs,
             resolve:{

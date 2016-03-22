@@ -26,8 +26,10 @@
                             //    only: state.permissions
                             //}
                         },
-                        controller: function (module, $controller) {
-                            return $controller(state.controller);
+                        controller: function (module, $controller, $scope) {
+                            return $controller(state.controller, {
+                                    $scope: $scope
+                                });
                         },
                         controllerAs: state.controllerAs,
                         resolve:{

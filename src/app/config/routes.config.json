@@ -25,6 +25,21 @@
       "app/views/lazy/lazy.controller.js",
       "app/components/case/case-example.service.js"
     ]
+  },
+  {
+    "state": "validation-example",
+    "url":"/validation-example",
+    "templateUrl": "app/views/validation-example/validation-example.tpl.html",
+    "pageTitle":"Lazy Loading Example",
+    "permissions": [],
+    "controller": "ValidationExampleController",
+    "controllerAs": "vm",
+    "name": "cpp-ui-spa-master.routes.validation-example",
+    "files":[
+      "app/components/common/form-validation/lazy-validation.directive.js",
+      "app/components/common/form-validation/lazy-validation-on-click.directive.js",
+      "app/components/common/form-validation/form-validation.module.js",
+      "app/views/validation-example/validation-example.controller.js"
+    ]
   }
-
 ]

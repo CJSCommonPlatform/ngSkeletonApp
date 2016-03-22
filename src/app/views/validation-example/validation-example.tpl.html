@@ -1,0 +1,66 @@
+<div>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <form data-lazy-validation="vm.form" novalidate>
+                    <div class="cpp-form-error-summary"
+                         role="group"
+                         aria-labelledby="error-summary-heading-example-2"
+                         data-ng-show="vm.form.$invalid">
+                        <h3 id="error-summary-heading-example-2">
+                            Required fields are blank
+                        </h3>
+
+                        <p>
+                            Optional description of the error(s) and how to correct them
+                        </p>
+                        <ul class="cpp-form-error-summary-list">
+                            <li data-ng-if="vm.form.fullName.$error.required"><a>Full name must be entered</a></li>
+                            <li data-ng-if="vm.form.fullName.$error.minlength"><a>Full name must be at least 5 characters long</a></li>
+                        </ul>
+                    </div>
+                    <h2>
+                        Your personal details
+                    </h2>
+
+                    <div class="form-group" data-ng-class="{'cpp-form-error': vm.form.fullName.$invalid }">
+                        <label for="example-full-name"
+                               id="error-message-full-name-label">
+                            <span class="form-label-bold">Full name</span>
+                            <span class="form-hint-text">As shown on your birth certificate or passport</span>
+                        </label>
+
+                        <div data-ng-if="vm.form.fullName.$error.required">
+                            <h6 class="cpp-form-error-message">
+                                Full name must be entered
+                            </h6>
+                        </div>
+                        <div data-ng-if="vm.form.fullName.$error.minlength">
+                            <h6 class="cpp-form-error-message">
+                                Full name must be at least 5 characters long
+                            </h6>
+                        </div>
+                        <input class="form-control"
+                               id="example-full-name"
+                               type="text"
+                               name="fullName"
+                               data-ng-model="vm.fullName"
+                               aria-describedby="error-message-full-name-label"
+                               data-ng-required="true"
+                               data-ng-minlength="5">
+                    </div>
+                    <input class="btn btn-default"
+                           type="submit"
+                           value="Submit form"
+                           data-lazy-validation-on-click="vm.submitForm()">
+
+                    <input class="btn btn-default"
+                           type="submit"
+                           value="Submit form (manual validation check)"
+                           data-lazy-validation-on-click
+                           data-ng-click="vm.checkValidationManually()">
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

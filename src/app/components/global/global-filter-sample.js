@@ -1,19 +1,19 @@
 (function () {
-    'use strict';
+  'use strict';
 
-    angular
-      .module('cpp-ui-spa-master.global.filterSample', [])
-      .filter('filterSample', filterSample);
+  angular
+    .module('cpp-ui-spa-master.global.filterSample', [])
+    .filter('filterSample', filterSample);
 
-    function filterSample() {
-        return filterSampleFilter;
+  function filterSample() {
+    return filterSampleFilter;
 
-        ////////////////
+    ////////////////
 
-        function filterSampleFilter(parameters) {
-            return parameters;
-        }
+    function filterSampleFilter(parameters) {
+      return parameters;
     }
+  }
 
 }());
 

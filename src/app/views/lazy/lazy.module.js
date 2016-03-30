@@ -1,10 +1,10 @@
 (function () {
 
-    'use strict';
+  'use strict';
 
-    angular
-      .module('cpp-ui-spa-master.routes.lazy', [
-          'ui.router'
-      ]);
+  angular
+    .module('cpp-ui-spa-master.routes.lazy', [
+      'ui.router'
+    ]);
 
 }());

@@ -3,8 +3,8 @@
   'use strict';
 
   angular
-      .module('cpp-ui-spa-master.config.routes', [])
-      .provider('dynamicStateProvider', dynamicState);
+    .module('cpp-ui-spa-master.config.routes', [])
+    .provider('dynamicStateProvider', dynamicState);
 
   function dynamicState($stateProvider) {
     this.$get = function () {
@@ -30,8 +30,8 @@
               return new $controller(state.controller);
             },
             controllerAs: state.controllerAs,
-            resolve:{
-              module: function ($ocLazyLoad){
+            resolve: {
+              module: function ($ocLazyLoad) {
                 return $ocLazyLoad.load({
                   name: state.name,
                   files: state.files,

@@ -1,18 +1,18 @@
 (function () {
 
-    'use strict';
+  'use strict';
 
-    angular
-      .module('cpp-ui-spa-master')
-      .factory('stacktraceService', stacktraceService);
+  angular
+    .module('cpp-ui-spa-master')
+    .factory('stacktraceService', stacktraceService);
 
-    /* @ngInject */
-    function stacktraceService() {
-        var service = {
-            print: printStackTrace
-        };
-        return service;
-    }
+  /* @ngInject */
+  function stacktraceService() {
+    var service = {
+      print: printStackTrace
+    };
+    return service;
+  }
 
 }());
 

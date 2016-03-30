@@ -1,24 +1,24 @@
 (function () {
 
-    'use strict';
+  'use strict';
 
-    angular
-      .module('cpp-ui-spa-master.global.factorySample', [])
-      .factory('factorySample', factorySample);
+  angular
+    .module('cpp-ui-spa-master.global.factorySample', [])
+    .factory('factorySample', factorySample);
 
-    /* @ngInject */
-    function factorySample() {
-        var service = {
-            functionName: functionName
-        };
-        return service;
+  /* @ngInject */
+  function factorySample() {
+    var service = {
+      functionName: functionName
+    };
+    return service;
 
-        ////////////////
+    ////////////////
 
-        function functionName() {
-            // code goes here
-        }
+    function functionName() {
+      // code goes here
     }
+  }
 
 }());
 

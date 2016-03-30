@@ -1,8 +1,8 @@
 (function () {
 
-    'use strict';
+  'use strict';
 
-    angular
-        .module('cpp-ui-spa-master.case.example', []);
+  angular
+    .module('cpp-ui-spa-master.case.example', []);
 
 }());

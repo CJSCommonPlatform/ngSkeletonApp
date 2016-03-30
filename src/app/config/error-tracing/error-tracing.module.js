@@ -17,7 +17,7 @@
 
 angular
   .module('cpp-ui-spa-master.global.error-tracing', [
-      'cpp-ui-spa-master.global.error-tracing.stacktraceService',
-      'cpp-ui-spa-master.global.error-tracing.exceptionHandler',
-      'cpp-ui-spa-master.global.error-tracing.errorLogService'
+    'cpp-ui-spa-master.global.error-tracing.stacktraceService',
+    'cpp-ui-spa-master.global.error-tracing.exceptionHandler',
+    'cpp-ui-spa-master.global.error-tracing.errorLogService'
   ]);

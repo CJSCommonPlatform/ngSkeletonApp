@@ -1,6 +1,6 @@
 {
   "rules": {
-    "indent": [ 2, 4 ], // 4 space indentation
+    "indent": [ 2, 2 ], // 4 space indentation
     "linebreak-style": [ 0, "unix" ], // no check for EOL
     "max-depth": [ 1, 4 ],
     "max-len": [ 1, 125, 2 ], // Max indentation depth

@@ -28,7 +28,7 @@ module.exports = function(config, log){
       .pipe($.connect.reload());
   });
 
-  gulp.task('build-css-vendor', ['rename-css-vendor'], function() {
+  gulp.task('build-css-vendor', function() {
     var stream = gulp.src(config.vendorStyles)
       .pipe($.less());
 

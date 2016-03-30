@@ -83,7 +83,10 @@
       ],
       distApp: dist + 'app',
       allAppJs: 'src/app/**/*.js',
-      fontFiles: '**/*.{otf,eot,svg,ttf,woff,woff2}',
+      fontFiles: [
+        'bower_components/font-awesome/fonts/*.{otf,eot,svg,ttf,woff,woff2}',
+        'bower_components/bootstrap/fonts/*.{otf,eot,svg,ttf,woff,woff2}'
+      ],
       fontDest: 'dist/assets/fonts',
       cppAssets: 'bower_components/ng-gov-uk/dist/assets/**/*',
       bowerCss:'bower_components/**/*.css',

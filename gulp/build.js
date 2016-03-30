@@ -6,7 +6,7 @@ var gutil = require('gulp-util');
 
 // create standalone build
 module.exports = function () {
-    gulp.task('build', ['clean-dist'], function (cb) {
+    gulp.task('build', ['rename-css-vendor', 'clean-dist'], function (cb) {
         if (gutil.env.production) {
             runSequence([
                 'copy-images',

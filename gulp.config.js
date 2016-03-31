@@ -83,6 +83,16 @@
       ],
       distApp: dist + 'app',
       allAppJs: 'src/app/**/*.js',
+      avoidShimsJs: [
+        'bower_components/html5shiv',
+        'bower_components/respond',
+        'bower_components/es5-shim'
+      ],
+      ieShimsJs: [
+        'bower_components/html5shiv/dist/html5shiv.min.js',
+        'bower_components/respond/src/respond.js',
+        'bower_components/es5-shim/es5-shim.min.js'
+      ],
       fontFiles: [
         'bower_components/font-awesome/fonts/*.{otf,eot,svg,ttf,woff,woff2}',
         'bower_components/bootstrap/fonts/*.{otf,eot,svg,ttf,woff,woff2}'
@@ -95,6 +105,7 @@
       allHtml: '**/*.html',
       vendorCss: '**/vendor*.css',
       prodVendorJs: 'scripts/vendor*.js',
+      prodShimJs: 'scripts/shim*.js',
       allConfigJs: 'src/app/config/*.js',
       configJs: dist + '**/config.module.js',
       allImagesFiles: '**/*.{png,jpg,jpeg,gif}',

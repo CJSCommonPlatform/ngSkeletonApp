@@ -30,9 +30,17 @@ module.exports = function(config, log){
       ))
       // [development] vendor scripts - references bowerFiles() in order to establish file order
       .pipe($.if(!$.util.env.production, $.inject(
-        gulp.src(bowerFiles(config.bowerFiles), {read: false, cwd: 'bower_components'}), {
+        gulp.src(bowerFiles({includeDev: true, filter: avoidIeShims}), {read: false, cwd: 'bower_components'}), {
           addRootSlash: false,
           name:        'vendor',
+          addPrefix:   'vendor'
+        }
+      )))
+      // [development] shim scripts
+      .pipe($.if(!$.util.env.production, $.inject(
+        gulp.src(bowerFiles({includeDev: true, filter: onlyIeShims}), {read: false, cwd: 'bower_components'}), {
+          addRootSlash: false,
+          name:        'shim',
           addPrefix:   'vendor'
         }
       )))
@@ -40,6 +48,13 @@ module.exports = function(config, log){
       .pipe($.if($.util.env.production, $.inject(
         gulp.src(config.prodVendorJs, dist), {
           name: 'vendor',
+          addRootSlash: false
+        }
+      )))
+      // [production] shim scripts
+      .pipe($.if($.util.env.production, $.inject(
+        gulp.src(config.prodShimJs, dist), {
+          name: 'shim',
           addRootSlash: false
         }
       )))
@@ -65,4 +80,22 @@ module.exports = function(config, log){
       .pipe(gulp.dest(config.build_destination))
       .pipe($.connect.reload());
   });
+
+  // Avoid shim files as they go somewhere else
+  function avoidIeShims(filePath) {
+    for (var i = 0; i < config.avoidShimsJs.length; i++) {
+      if (filePath.indexOf('.js') === -1 || filePath.indexOf(config.avoidShimsJs[i]) !== -1)
+        return false;
+    }
+    return true;
+  }
+
+  // include only shim files
+  function onlyIeShims(filePath) {
+    for (var i = 0; i < config.avoidShimsJs.length; i++) {
+      if (filePath.indexOf('.js') !== -1 && filePath.indexOf(config.avoidShimsJs[i]) !== -1)
+        return true;
+    }
+    return false;
+  }
 };

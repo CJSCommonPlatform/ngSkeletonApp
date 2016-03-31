@@ -14,6 +14,7 @@ module.exports = function () {
                 'build-css-vendor',
                 'build-js-app',
                 'build-js-vendor',
+                'build-js-vendor-shim',
                 'copy-config',
                 'copy-favicon',
                 'copy-fonts',

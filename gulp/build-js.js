@@ -27,11 +27,27 @@ module.exports = function(config, log){
   });
 
   gulp.task('build-js-vendor', function() {
-    return gulp.src(bowerFiles(config.bowerFiles))
+    return gulp.src(bowerFiles({includeDev: true, filter: avoidIeShims}), {base: 'bower_components'})
       .pipe($.concat('vendor.js'))
       .pipe(productionJs())
       .pipe(gulp.dest(config.distScripts));
   });
+
+  gulp.task('build-js-vendor-shim', function() {
+    return gulp.src(config.ieShimsJs)
+      .pipe($.concat('shim.js'))
+      .pipe(productionJs())
+      .pipe(gulp.dest(config.distScripts));
+  });
+
+  // filter function
+  function avoidIeShims(filePath) {
+    for (var i = 0; i < config.avoidShimsJs.length; i++) {
+      if (filePath.indexOf('.js') === -1 || filePath.indexOf(config.avoidShimsJs[i]) !== -1)
+        return false;
+    }
+    return true;
+  }
 };
 
 var productionJs = lazypipe()

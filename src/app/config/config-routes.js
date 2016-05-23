@@ -18,6 +18,7 @@
          */
         addState: function (state) {
           $stateProvider.state(state.state, {
+            abstract: state.abstract ? true : false,
             url: state.url,
             templateUrl: state.templateUrl,
             data: {

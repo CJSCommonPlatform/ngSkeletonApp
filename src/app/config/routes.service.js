@@ -5,7 +5,7 @@
     .module('cpp-ui-spa-master.config.routes-service', [])
     .factory('RoutesService', RoutesService);
 
-  function RoutesService($rootScope, $state, routesConfig, dynamicStateProvider, lodash) {
+  function RoutesService($rootScope, $state, $location, routesConfig, $stateParams, $anchorScroll, dynamicStateProvider, lodash) {
     var service = {
       init: init,
       initialised: false
@@ -33,7 +33,8 @@
         if ($state.current && $state.current.data && $state.current.data.pageTitle) {
           $rootScope.pageTitle = $state.current.data.pageTitle;
         }
-
+        $location.hash($stateParams.scrollTo);
+        $anchorScroll();
       });
     }
 
